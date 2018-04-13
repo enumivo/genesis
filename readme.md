@@ -1,4 +1,4 @@
-# EOSIO Genesis
+# Enumivo Genesis
 
 Tools used to initialize a genesis block for the EOS Platform
 

@@ -1,4 +1,4 @@
-const SNAPSHOT_FILE = 'https://raw.githubusercontent.com/EOSIO/genesis/master/snapshot.csv';
+const SNAPSHOT_FILE = 'https://raw.githubusercontent.com/Enumivo/genesis/master/snapshot.csv';
 let snapshot = null;
 genesis = null;
 

@@ -1,4 +1,4 @@
-var   SNAPSHOT_FILE = 'https://raw.githubusercontent.com/EOSIO/genesis/master/snapshot.csv'
+var   SNAPSHOT_FILE = 'https://raw.githubusercontent.com/Enumivo/genesis/master/snapshot.csv'
 var   snapshot = null
       genesis = null
 
