@@ -22,7 +22,7 @@ This tool is experimental and downloadable executables are not yet available.
 Clone the repo
 
 ```bash
-git clone https://github.com/EOSIO/genesis.git
+git clone https://github.com/enumivo/genesis.git
 ```
 
 Navigate to keys directory
