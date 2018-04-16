@@ -72,13 +72,13 @@ class Wallet {
       //Might be user error
       else if(eos_key.startsWith('key')){
         let eos_key_mod = eos_key.substring(3)
-        if( eos_key_mod.startsWith('EOS') ) {
+        if( eos_key_mod.startsWith('ENU') ) {
           eos_key = eos_key_mod
         }
       }
-      //Convert something that looks like a key to EOS key (STM, BTS, ETC)
-      else if(!eos_key.startsWith('EOS') && !/[^a-zA-Z0-9]/.test(eos_key)) {
-        let eos_key_test = `EOS${eos_key.slice(3, eos_key.length)}`
+      //Convert something that looks like a key to ENU key (STM, BTS, ETC)
+      else if(!eos_key.startsWith('ENU') && !/[^a-zA-Z0-9]/.test(eos_key)) {
+        let eos_key_test = `ENU${eos_key.slice(3, eos_key.length)}`
         eos_key = util.misc.is_eos_public_key(eos_key_test) ? eos_key_test : eos_key
       }
     }
@@ -130,13 +130,13 @@ class Wallet {
         error = 'key_is_empty'
       }
 
-      //It may be an EOS private key
+      //It may be an ENU private key
       else if(this.eos_key.startsWith('5')) {
         error = 'key_is_private'
       }
 
-      // It almost looks like an EOS key
-      else if(this.eos_key.startsWith('EOS')) {
+      // It almost looks like an ENU key
+      else if(this.eos_key.startsWith('ENU')) {
         error = 'key_is_malformed'
       }
 

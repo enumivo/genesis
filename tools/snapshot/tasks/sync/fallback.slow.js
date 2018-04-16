@@ -84,7 +84,7 @@ module.exports = ( state, complete ) => {
           .then( () => {
             if(config.cache)
               db.Keys.upsert({ address: address, tx_hash: tx_hash, public_key: pubkey, derived_eos_key: eos_key })
-            // console.log(`EOS Key Generated: #${block_index} => ${tx_hash} => ${address} => ${pubkey} => ${eos_key}`)
+            // console.log(`ENU Key Generated: #${block_index} => ${tx_hash} => ${address} => ${pubkey} => ${eos_key}`)
             redis.del(address);
             pks_found++
             next_tx()

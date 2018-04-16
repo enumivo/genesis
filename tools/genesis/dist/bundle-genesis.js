@@ -129,7 +129,7 @@ class Genesis {
         "name": account.eth.replace(/"/g, ''),
         "owner_key": account.eos.replace(/"/g, ''),
         "active_key": account.eos.replace(/"/g, ''),
-        "liquid_balance": `${account.balance.replace(/"/g, '')} EOS`
+        "liquid_balance": `${account.balance.replace(/"/g, '')} ENU`
       };
     });
   }
@@ -168,7 +168,7 @@ class Genesis {
 
   append_to_initial_accounts() {
     this.options.additional_accounts.map(account => {
-      account.liquid_balance = `${account.liquid_balance} EOS`;
+      account.liquid_balance = `${account.liquid_balance} ENU`;
       return account;
     });
     this.json.initial_accounts = this.json.initial_accounts.concat(this.options.additional_accounts);

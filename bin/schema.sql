@@ -161,7 +161,7 @@ CREATE TABLE `wallets` (
   `fallback_error` varchar(256) DEFAULT NULL,
   `valid` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`address`),
-  KEY `EOSKEYINDEX` (`eos_key`)
+  KEY `ENUKEYINDEX` (`eos_key`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 

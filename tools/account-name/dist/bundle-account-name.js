@@ -79,7 +79,7 @@ const lookup = value => {
   setTimeout(() => {
     let found = -1;
 
-    if (startsWithETH(lookup)) found = SNAPSHOT.findIndex(row => row.eos == lookup);else if (startsWithEOS(lookup)) found = SNAPSHOT.findIndex(row => row.eth == lookup);else display_invalid();
+    if (startsWithETH(lookup)) found = SNAPSHOT.findIndex(row => row.eos == lookup);else if (startsWithENU(lookup)) found = SNAPSHOT.findIndex(row => row.eth == lookup);else display_invalid();
 
     if (found > -1) display_account_name(found);else display_not_found();
   }, 1000);
@@ -111,7 +111,7 @@ const startsWithETH = query => {
   return searchPattern.test(query);
 };
 
-const startsWithEOS = query => {
-  var searchPattern = new RegExp('EOS', 'i');
+const startsWithENU = query => {
+  var searchPattern = new RegExp('ENU', 'i');
   return searchPattern.test(query);
 };

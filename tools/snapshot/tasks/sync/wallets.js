@@ -35,7 +35,7 @@ module.exports = (state, complete) => {
   const transfers = (wallet, finished) => {
 
     //Cumulative balance calculations are not required for mainnet because tokens will be frozen
-    //mainnet balance calculation uses EOS ERC20 token's balanceOf() method.
+    //mainnet balance calculation uses ENU ERC20 token's balanceOf() method.
     if( typeof config.mode !== 'undefined' && config.mode == 'mainnet') {
       finished(null, wallet)
       return
@@ -133,7 +133,7 @@ module.exports = (state, complete) => {
 
   const log_table_reset = () => {
     table = new Table(`${Math.round(index*50/uniques.size*100)}% [${index*50}/${uniques.size}] `)
-    table.setHeading('V', 'R', 'ETH', 'EOS', 'In Wallet', 'Unclaimed', 'Reclaimed', 'Total', 'Reg. Error')
+    table.setHeading('V', 'R', 'ETH', 'ENU', 'In Wallet', 'Unclaimed', 'Reclaimed', 'Total', 'Reg. Error')
   }
 
   const log_table_render_and_reset = () => {
@@ -148,10 +148,10 @@ module.exports = (state, complete) => {
       (wallet.registered ? `✓` : ` `),
       wallet.address,
       wallet.eos_key,
-      `${wallet.balance.wallet} EOS`,
-      `${wallet.balance.unclaimed} EOS`,
-      `${wallet.balance.reclaimed} EOS`,
-      `${wallet.balance.total} EOS`,
+      `${wallet.balance.wallet} ENU`,
+      `${wallet.balance.unclaimed} ENU`,
+      `${wallet.balance.reclaimed} ENU`,
+      `${wallet.balance.total} ENU`,
       `${wallet.register_error ? wallet.register_error : ""}`
     )
   }

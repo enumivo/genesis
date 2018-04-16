@@ -2,7 +2,7 @@ const bn = require('bignumber.js')
 
 global.SS_STARTED_TIMESTAMP               = Date.now()/1000 | 0
 global.SS_MAINNET_TIMESTAMP_END           = 0 //A cutoff timestamp should be provided so snapshot audits are not impossible. Mainnet snapshot would only account for registrations/claims up to the last block with a timestamp lte this timestamp.
-global.SS_ACCEPTABLE_SUPPLY_DEVIATION     = 5 //total number of EOS deviation allowed in for accurate snapshot, usually less than 1/-1. 5 is generous.
+global.SS_ACCEPTABLE_SUPPLY_DEVIATION     = 5 //total number of ENU deviation allowed in for accurate snapshot, usually less than 1/-1. 5 is generous.
 
 global.WAD                                = new bn(1000000000000000000)
 

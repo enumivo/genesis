@@ -52,7 +52,7 @@ balances.unclaimed = ( address, buys, claims, period_max, callback) => {
           periods
             //Get periods by unclaimed and lte last block
             .filter( (period, i) => { return i <= (period_max || CS_NUMBER_OF_PERIODS-1) && !period.claimed && period.buys.gt(0) })
-            //Sum the pre-calculated EOS balance of each resulting period
+            //Sum the pre-calculated ENU balance of each resulting period
             .reduce( (sum, period) => period.share.plus(sum), new bn(0) )
         )
         next()
@@ -72,7 +72,7 @@ balances.reclaimed = ( address, reclaimables, callback ) => {
     for( let tx of reclaimables ) {
       reclaimed_balance = new bn(tx.value).plus( reclaimed_balance ) //Stored in database from_wei for consistency, convert back to wei, so patterns are consistent
     }
-    // console.log(`INFO: ${address} reclaimed ${reclaimed_balance.div(WAD)} EOS`)
+    // console.log(`INFO: ${address} reclaimed ${reclaimed_balance.div(WAD)} ENU`)
     callback( reclaimed_balance )
   }
 }

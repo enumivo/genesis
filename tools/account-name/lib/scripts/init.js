@@ -13,7 +13,7 @@ const lookup = function( value ){
     if(startsWithETH(value)) {
       found = SNAPSHOT.findIndex( function(row){ return row.eth.toLowerCase() == value.toLowerCase() } )
     }
-    else if(startsWithEOS(value)) {
+    else if(startsWithENU(value)) {
       found = SNAPSHOT.filter( function(row){ return row.eos == value } )
     }
     else { display_invalid( value ) }
@@ -70,8 +70,8 @@ const startsWithETH = (query) => {
   return searchPattern.test(query)
 }
 
-const startsWithEOS = (query) => {
-  var searchPattern = new RegExp('EOS', 'i');
+const startsWithENU = (query) => {
+  var searchPattern = new RegExp('ENU', 'i');
   return searchPattern.test(query)
 }
 

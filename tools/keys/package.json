@@ -1,7 +1,7 @@
 {
   "name": "eos-genesis-keys-utility",
   "version": "0.0.1",
-  "description": "EOS Genesis Keys Utility",
+  "description": "ENU Genesis Keys Utility",
   "main": "main.js",
   "scripts": {
     "compile": "sh ./bin/compile.sh",
@@ -9,7 +9,7 @@
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
-    "EOS",
+    "ENU",
     "eosjs-ecc",
     "genesis"
   ],

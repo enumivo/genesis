@@ -56,7 +56,7 @@ const complete = (error, pubkey, callback) => {
     let eos_key = util.misc.convert_ethpk_to_eospk(pubkey)
     if(util.misc.is_eos_public_key(eos_key))
       callback(null, eos_key)
-      // console.log(`EOS Key Generated: ${pubkey} => ${eos_key}`),
+      // console.log(`ENU Key Generated: ${pubkey} => ${eos_key}`),
     else
       callback('converted_key_invalid')
   }

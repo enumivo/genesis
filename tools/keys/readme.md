@@ -1,11 +1,11 @@
-# EOS Genesis Key Utility
+# ENU Genesis Key Utility
 
-![EOS Genesis Key Utility Screenshot](https://raw.githubusercontent.com/Enumivo/genesis/keys-simple/tools/keys/src/images/screenshot.png)
+![ENU Genesis Key Utility Screenshot](https://raw.githubusercontent.com/Enumivo/genesis/keys-simple/tools/keys/src/images/screenshot.png)
 
-An offline EOS key utility built with nodejs and Electron. This utility does two things:
+An offline ENU key utility built with nodejs and Electron. This utility does two things:
 
-- Generate a valid EOS keypair
-- Validate an existing EOS keypair
+- Generate a valid ENU keypair
+- Validate an existing ENU keypair
 
 This tool is experimental and downloadable executables are not yet available.
 
